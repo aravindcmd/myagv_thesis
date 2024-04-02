@@ -140,6 +140,8 @@ if __name__ == '__main__':
         autoNav()
     except rospy.ROSInterruptException:
         rospy.loginfo("map_navigation node terminated.")
+        cap.release()
+        cv2.destroyAllWindows()
 
 
 
