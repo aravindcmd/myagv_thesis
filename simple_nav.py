@@ -14,10 +14,10 @@ client.wait_for_server()
 
 goal = MoveBaseGoal()
 goal.target_pose.header.frame_id = 'map'
-goal.target_pose.pose.position.x = -0.276414129138
-goal.target_pose.pose.position.y = -0.579892456532
-goal.target_pose.pose.orientation.z = 0.727
-goal.target_pose.pose.orientation.w = 0.686
+goal.target_pose.pose.position.x = 0.177242000075
+goal.target_pose.pose.position.y = 0.101335685689
+goal.target_pose.pose.orientation.z = 0.659369163161
+goal.target_pose.pose.orientation.w = -0.751819331138
 
 client.send_goal(goal)
 client.wait_for_result()
