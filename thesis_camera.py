@@ -10,13 +10,14 @@ import sys, select, termios, tty
 import time
 import cv2
 import numpy as np
+rospy.init_node('myagv_teleop')
+pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
 
 def camTrack():
     cap = cv2.VideoCapture(0)
     cap.set(3, 160)
     cap.set(4, 120)
-    rospy.init_node('myagv_teleop')
-    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+    
     while True:
         ret, frame = cap.read()
         low_b = np.uint8([5,5,5])
